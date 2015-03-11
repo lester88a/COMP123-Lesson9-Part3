@@ -30,6 +30,7 @@
         {
             this.Hellolabel = new System.Windows.Forms.Label();
             this.ClickMeButton = new System.Windows.Forms.Button();
+            this.GreetingTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Hellolabel
@@ -39,7 +40,7 @@
             this.Hellolabel.Location = new System.Drawing.Point(131, 210);
             this.Hellolabel.Name = "Hellolabel";
             this.Hellolabel.Size = new System.Drawing.Size(195, 32);
-            this.Hellolabel.TabIndex = 0;
+            this.Hellolabel.TabIndex = 2;
             this.Hellolabel.Text = "Hello World!";
             this.Hellolabel.Click += new System.EventHandler(this.Hellolabel_Click);
             // 
@@ -54,12 +55,24 @@
             this.ClickMeButton.UseVisualStyleBackColor = true;
             this.ClickMeButton.Click += new System.EventHandler(this.ClickMeButton_Click);
             // 
+            // GreetingTextBox
+            // 
+            this.GreetingTextBox.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GreetingTextBox.Location = new System.Drawing.Point(12, 157);
+            this.GreetingTextBox.Name = "GreetingTextBox";
+            this.GreetingTextBox.Size = new System.Drawing.Size(460, 39);
+            this.GreetingTextBox.TabIndex = 0;
+            this.GreetingTextBox.Text = "Enter Message";
+            this.GreetingTextBox.TextChanged += new System.EventHandler(this.GreetingTextBox_TextChanged);
+            this.GreetingTextBox.Enter += new System.EventHandler(this.GreetingTextBox_Enter);
+            // 
             // FirstForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(484, 462);
+            this.Controls.Add(this.GreetingTextBox);
             this.Controls.Add(this.ClickMeButton);
             this.Controls.Add(this.Hellolabel);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -75,6 +88,7 @@
 
         private System.Windows.Forms.Label Hellolabel;
         private System.Windows.Forms.Button ClickMeButton;
+        private System.Windows.Forms.TextBox GreetingTextBox;
     }
 }
 

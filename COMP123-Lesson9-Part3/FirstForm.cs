@@ -27,21 +27,40 @@ namespace COMP123_Lesson9_Part3
 
         private void ClickMeButton_Click(object sender, EventArgs e)
         {
-            if (helloLabelFlag==true)
+            if (GreetingTextBox.Text!="")
             {
-                Hellolabel.Text = "Hello World!";
-                helloLabelFlag = false;
+                Hellolabel.Text = GreetingTextBox.Text;
             }
-
             else
             {
-                Hellolabel.Text = "Good Bye!";
-                helloLabelFlag = true;
+                if (helloLabelFlag == true)
+                {
+                    Hellolabel.Text = "Hello World!";
+                    helloLabelFlag = false;
+                }
+
+
+                else
+                {
+                    Hellolabel.Text = "Good Bye!";
+                    helloLabelFlag = true;
+                }
             }
+            
            
             //Console.WriteLine(Hellolabel.Text);
             //Console.ReadKey();
             //Hellolabel.ResetText();
+        }
+
+        private void GreetingTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Hellolabel.Text = GreetingTextBox.Text;
+        }
+
+        private void GreetingTextBox_Enter(object sender, EventArgs e)
+        {
+            Hellolabel.Text = GreetingTextBox.Text;
         }
     }
 }
