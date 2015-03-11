@@ -16,7 +16,7 @@ namespace COMP123_Lesson9_Part3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FirstForm()); //Indicates which form to run first
         }
     }
 }
